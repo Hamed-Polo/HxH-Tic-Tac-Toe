@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Merriweather Sans", sans-serif;
+    color: #004c26;
+}
+.title{
+    max-width: 500px;
+    max-height: 800px;
+}
+
+.wrapper {
+    background-image: url("/images/background.png");
+    background-repeat: no-repeat;
+    max-width: 1440px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.restart {
+    color: #43004c;
+    width: 175px;
+    height: 50px;
+    display: flex;
+    transition: all 0.2s ease;
+    justify-content: center;
+    border-radius: 50px;
+    border: 2px solid #004c26;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.restart:hover {
+    background: #43004c;
+    color: #4a9f46;
+}
+
+.header {
+    display: flex;
+    color: #9A9A9A;
+    font-size: 24px;
+}
+
+.header .player-gon {
+    flex: 1;
+    border-bottom: 5px solid #eee;
+    padding-bottom: 8px;
+}
+.player-gon.active {
+    color: #4a9f46;
+    border-color: #004c26;
+}
+
+.header .player-killua {
+    flex: 1;
+    border-bottom: 5px solid #eee;
+    padding-bottom: 8px;
+}
+
+.player-killua.active {
+    color:#754571;
+    border-color: #754571;
+}
+
+.game {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); /*  */
+    flex-grow: 1;
+    grid-gap: 0px;
+    padding: 10px;
+}
+
+.board-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    background: white;
+    cursor: pointer;
+}
+
+.board-tile:not(:nth-child(3n)) { /* grab all the ones not divisible by 3 */
+    border-right: 3px solid rgba(137, 163, 189, 0.58);
+}
+
+.board-tile:not(:nth-last-child(-n + 3)) {
+    border-bottom: 3px solid rgba(137, 163, 189, 0.58);
+}
+
+.board-tile:hover {
+    background: #eee;
+}
+
+.tile-gon {
+    color: #42beb800;
+    background: url("/images/gon.png");
+    width: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.dark .tile-gon {
+    color: #42beb800;
+    background: url("/images/Angry\ gon\ \(1\).png");
+    width: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.dark .tile-winner span {
+    width: 100%;
+    height: 100%;
+    background-size: auto;
+    background-color: #995fcb;
+}
+
+.tile-killua {
+    color: #ff010100;   
+    background: url("/images/killua.png") no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 90px;
+    background-position: center;
+}
+
+body.dark .tile-killua {
+    color: #ff010100;   
+    background: url("/images/Killua\ Angry\ \(1\).png") no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 90px;
+    background-position: center;
+}
+
+.tile-winner span {
+    width: 100%;
+    height: 100%;
+    background-color: #43004c;
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        background-color: black;
+    }
+   
+    .player-killua {
+        color:rgb(107, 107, 107);
+    }
+    .player-gon {
+        padding-left: 100px;
+        color:rgb(107, 107, 107);
+    }
+    .player-gon.active {
+        color:#004c26;
+    }
+    .wrapper {
+        padding: 0;
+        flex-direction: column;
+        background-image: url("/images/background-p3.png");
+        background-repeat: repeat-y;
+    }
+    .left {
+        margin-bottom: 50px;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+body.dark {
+    color: #4a9f46;
+}
+body.dark .wrapper {
+    background-image: url('/images/dark-background.jpeg');
+}
+body.dark .player-killua.active{
+    color: #995fcb;
+    border-color: #995fcb;
+}
+body.dark .player-gon.active {
+    color:#4FD34D;
+    border-color: #4a9f46;
+}
+body.dark .restart {
+    color:#995fcb;
+    border-color: black;
+}
+.checkbox {
+	opacity: 0;
+    display: flex;
+	position: relative;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    margin-left: 15px;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+    background-color: gray;
+}
+
+
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
+}
+
+.win-message {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.win-message.x {
+    color: #164d13;
+}
+
+.win-message.o {
+    color: #2e347f;
+}
+.win-message.equal {
+    color: #004c26;
+}
+body.dark .win-message.equal {
+    color: #43004c;
+}

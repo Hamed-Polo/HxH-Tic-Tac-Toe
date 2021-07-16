@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link href="favicon_io/favicon.ico" rel="icon">
+    <link href="favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="android-chrome-192x192" type="image/png" sizes="192x192" href="./favicon_io/android-chrome-192x192.png">
+    <link rel="android-chrome-512x512" type="image/png" sizes="512x512" href="./favicon_io/android-chrome-512x512.png">
+
+    <title>Hamed's HxH Tic Tac Toe</title>
+    
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="left">
+            <div class="title">
+                <h1>
+                    The Hunter x Hunter <br>
+                    Tic-tac-toe <br>
+                    Game!
+                </h1>
+            </div>
+            <div class="win-message"></div>
+            <div class="restart">
+                Start a New Game
+            </div>
+
+            <div>
+                <input type="checkbox" class="checkbox" id="chk" />
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </div>
+        <div class="right">
+            <div class="game">
+                <div class="header">
+                    <div class="player-gon">
+                        <span>Player Gon</span>
+                    </div>
+                    <div class="player-killua">
+                        <span>Player Killua</span>
+                    </div>
+                </div>
+                <div class="board">
+                    <div class="board-tile" data-index="0"></div>
+                    <div class="board-tile" data-index="1"></div>
+                    <div class="board-tile" data-index="2"></div>
+                    <div class="board-tile" data-index="3"></div>
+                    <div class="board-tile" data-index="4"></div>
+                    <div class="board-tile" data-index="5"></div>
+                    <div class="board-tile" data-index="6"></div>
+                    <div class="board-tile" data-index="7"></div>
+                    <div class="board-tile" data-index="8"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js" type="module"></script>
+
+    <!-- <script>
+        // Dark Mode Code
+
+        function DarkModeTheme() {
+            document.body.classList.toggle('dark-Mode-Theme');
+        }
+    </script> -->
+
+</body>
+</html>
