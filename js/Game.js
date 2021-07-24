@@ -1,6 +1,5 @@
 export default class Game {
     constructor() {
-        console.log("init game");
         this.board = new Array(9).fill(null);
         this.turn = "X";
     }
@@ -20,8 +19,6 @@ export default class Game {
         }
 
         if (this.board[h]) {
-            // !this.nextTurn();
-            console.log("this spot is taken already.")
             return;
         }
 
@@ -30,6 +27,8 @@ export default class Game {
         let winningComination = this.winningCombinations();
         const winMessage = document.querySelector('.win-message')
 
+        const playerX = document.getElementById('gon')
+        const playerO = document.getElementById('killua')
         if (!winningComination) {
             this.nextTurn();
         }
@@ -39,11 +38,17 @@ export default class Game {
         }
         else {
             winMessage.classList.add(this.turn.toLocaleLowerCase())
-            if (`${this.turn}` == "X") {
+            if (`${this.turn}` == "X" && playerX.innerText == "Player Gon") {
                 winMessage.innerText = `Player Gon Wins!`
             }
-            else {
+            else if (`${this.turn}` == "X") {
+                winMessage.innerText = `Player Kurapika Wins!`
+            }
+            else if (`${this.turn}` == "O" && playerO.innerText == "Player Killua") {
                 winMessage.innerText = `Player Killua Wins!`
+            }
+            else {
+                winMessage.innerText = `Player Leorio Wins!`
             }
         }
     }

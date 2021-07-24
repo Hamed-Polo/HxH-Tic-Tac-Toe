@@ -40,15 +40,23 @@
                     <i class="fas fa-sun"></i>
                     <div class="ball"></div>
                 </label>
+                <p style="margin-top: 20px; color: #4e0058; font-weight: bold;">Change Characters</p>
+                <input type="checkbox" class="checkbox" id="characterChange" />
+                <label class="label" for="characterChange">
+                    <i class="fas fa-link"></i>
+                    <i class="far fa-hand-rock"></i>
+                    <div class="ball"></div>
+                </label>
+                
             </div>
         </div>
         <div class="right">
             <div class="game">
                 <div class="header">
-                    <div class="player-gon">
+                    <div class="player-gon" id='gon'>
                         <span>Player Gon</span>
                     </div>
-                    <div class="player-killua">
+                    <div class="player-killua" id='killua'>
                         <span>Player Killua</span>
                     </div>
                 </div>
@@ -67,14 +75,6 @@
         </div>
     </div>
     <script src="./js/main.js" type="module"></script>
-
-    <!-- <script>
-        // Dark Mode Code
-
-        function DarkModeTheme() {
-            document.body.classList.toggle('dark-Mode-Theme');
-        }
-    </script> -->
 
 </body>
 </html>

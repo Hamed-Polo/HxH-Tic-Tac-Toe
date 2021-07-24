@@ -7,7 +7,6 @@ gameView.updateBoard(game);
 
 document.querySelector(".restart").addEventListener("click", () =>{
     restartGame();
-    console.log("New Game");
 })
 
 let tiles = document.querySelectorAll(".board-tile");
@@ -42,3 +41,9 @@ const chk = document.getElementById('chk');
 chk.addEventListener('change', () => {
     document.body.classList.toggle("dark");
 });
+
+const characterChange = document.getElementById('characterChange');
+
+characterChange.addEventListener('change', () => {
+    document.body.classList.toggle('ccg');
+})

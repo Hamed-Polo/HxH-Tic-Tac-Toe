@@ -258,6 +258,14 @@ body.dark .restart {
 	color: #f39c12;
 }
 
+.fa-link {
+    color:rgb(150, 0, 0);
+}
+
+.fa-hand-rock {
+    color:#164d13;
+}
+
 .win-message {
     font-size: 30px;
     font-weight: bold;
@@ -271,9 +279,98 @@ body.dark .restart {
 .win-message.o {
     color: #2e347f;
 }
+
+body.ccg .win-message.x {
+    color: #e3ac28;
+}
 .win-message.equal {
     color: #004c26;
 }
 body.dark .win-message.equal {
     color: #43004c;
+}
+
+body.ccg div#gon span{
+    visibility: hidden;
+    position: relative;
+}
+body.ccg div#gon ::after {
+    visibility: visible;
+    position: absolute;
+    width: 170px;
+    left: 0;
+    top: 0;
+    content: 'Player Kurapika';
+}
+body.ccg .player-gon.active {
+    border-color: rgb(148, 0, 0);
+    color:#e3ac28;
+}
+body.ccg .player-killua span {
+    visibility: hidden;
+    position: relative;
+}
+
+body.ccg .player-killua ::after {
+    visibility: visible;
+    position: absolute;
+    width: 170px;
+    left: 0;
+    top: 0;
+    content: 'Player Leorio';
+}
+body.ccg .player-killua.active {
+    color:#0700d6;
+    border-color:black;
+}
+
+body.ccg .tile-gon {
+    background: url("/images/Kurapika.png");
+    width: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.ccg .tile-winner span {
+    width: 100%;
+    height: 100%;
+    background-color: #43004c;
+}
+
+body.ccg .tile-killua {
+    background: url("/images/Leorio.png") no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 90px;
+    background-position: center;
+}
+
+body.ccg.dark .tile-gon{
+    background: url("/images/dark-kurapika.png");
+    width: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.ccg.dark .tile-killua{
+    background: url("/images/dark-leorio.png");
+    width: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body.ccg.dark .player-gon.active{
+    color: #ffcc55;
+}
+body.ccg.dark .player-killua.active{
+    color: #0011ff;
+}
+
+body.ccg.dark .tile-winner span {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-color: #995fcb;
 }
