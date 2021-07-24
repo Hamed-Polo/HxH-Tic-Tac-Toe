@@ -23,15 +23,27 @@ function onTileClick(h) {
 }
 
 function restartGame() {
-    game = new Game();
-    gameView.updateBoard(game);
+    var turn = game.turn;
+    console.log(turn);
 
+    if (turn == "X") {
+        turn = "O";
+    }
+    else {
+        turn = "X"
+    }
+    console.log("after change", turn);
+
+    game = new Game();
+    game.turn = turn;
+    gameView.updateBoard(game);
     document.querySelectorAll('.board-tile').forEach(elem => {
         elem.classList.remove('winner', 'tile-gon', 'tile-killua')
     })
     const winMessage = document.querySelector('.win-message')
     winMessage.innerText = "";
-    winMessage.classList.remove('equal','x','o')
+    winMessage.classList.remove('equal','x','o') 
+    console.log("new game: ", game.turn);
 }
 
 gameView.updateBoard(game);
