@@ -186,6 +186,11 @@ body.dark .tile-killua {
     .left {
         margin-bottom: 50px;
     }
+    .win-message {
+        position: relative;
+        top: 250px;
+        left: 150px;
+    }
 }
 
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
